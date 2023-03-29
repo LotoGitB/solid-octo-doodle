@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/M2S5/Breakeout.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/M2S8-E1/FSPTrainer.unity
+    guid: 9dd96d40173a3e948b509d388d0b78a7
   m_configObjects: {}
