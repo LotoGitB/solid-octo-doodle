@@ -8,6 +8,7 @@ public class TimerCtrl : MonoBehaviour
   public float startTime = 10f;
   public TextMeshProUGUI timerText;
   private float actualTime;
+ 
   // Start is called before the first frame update
   void Start()
   {
@@ -20,12 +21,13 @@ public class TimerCtrl : MonoBehaviour
     if (actualTime > 0)
     {
       actualTime -= Time.deltaTime;
-      timerText.text = actualTime.ToString("0.00");
     }
     else
     {
       actualTime = 0;
     }
+
+    timerText.text = actualTime.ToString("0.00");
   }
   public void AddTime(float timeToAdd)
   {
@@ -33,7 +35,14 @@ public class TimerCtrl : MonoBehaviour
   }
   public void MinusTime(float timeToQuit)
   {
-    actualTime -= timeToQuit;
+    if (actualTime - timeToQuit > 0)
+    {
+      actualTime -= timeToQuit;
+    }
+    else
+    {
+      actualTime = 0;
+    }
   }
   public float GetTimer()
   {
